@@ -1,11 +1,24 @@
-# 🔍 nmaping-plc-s
+# nmaping-plc-s
 
-A simple and fast tool to discover PLCs on your network using **nmap**.  
-Scans for common industrial protocol ports like **Modbus (502)**, **EtherNet/IP (44818)**, and **port 102 (S7comm/ISO-TSAP)**.
+A fast and easy tool to discover PLCs on your network using **nmap**.  
+Scans for common industrial protocol ports: **Modbus (502)**, **EtherNet/IP (44818)**, and **S7comm/ISO-TSAP (102)**.
 
 ---
 
-## 📋 Requirements
+## MASSIVE UPDATE — Full Cross-Platform Support
+
+nmaping-plc-s now runs on **Linux, macOS, and Windows** with dedicated scripts for each platform.  
+No more manual command typing — just run the script for your OS and go.
+
+| Platform | Script | Description |
+|----------|--------|-------------|
+| Linux / macOS | `nmpaping.sh` | Bash script, prompts for IP range and scans |
+| Windows | `nmapping_PLC.bat` | Simple batch script with nmap check |
+| Windows (Easy Mode) | `nmapping_PLC_easy.bat` | Interactive menu with preset ranges, single IP mode, and save-to-file |
+
+---
+
+## Requirements
 
 - [nmap](https://nmap.org/) installed on your system
 
@@ -20,15 +33,47 @@ Scans for common industrial protocol ports like **Modbus (502)**, **EtherNet/IP 
 | Windows | [Download installer](https://nmap.org/download.html) |
 
 ---
-## 🖥️ Script
-Clone the repo and run:
-```bash
-chmod +x nmaping.sh
-./nmaping.sh
-```
-## 🚀 Usage
 
-Run the following command and replace the IP range with your own network:
+## Usage
+
+### Linux / macOS
+
+```bash
+chmod +x nmpaping.sh
+./nmpaping.sh
+```
+
+The script will prompt you to enter your IP range and run the scan automatically.
+
+### Windows — Standard
+
+Double-click `nmapping_PLC.bat` or run it from a terminal:
+
+```cmd
+nmapping_PLC.bat
+```
+
+If nmap is not installed, a popup will open and offer to take you to the download page.
+
+### Windows — Easy Mode
+
+Double-click `nmapping_PLC_easy.bat` or run it from a terminal:
+
+```cmd
+nmapping_PLC_easy.bat
+```
+
+Features:
+- Interactive menu with common preset IP ranges (home/office and industrial)
+- Option to enter a custom range or scan a single IP
+- Option to save scan results to a timestamped `.txt` file
+- Scan again without restarting
+
+---
+
+## Manual Usage
+
+You can also run nmap directly without any script:
 
 ```bash
 nmap -p 102,502,44818 --open <your-ip-range>
@@ -40,11 +85,9 @@ nmap -p 102,502,44818 --open <your-ip-range>
 nmap -p 102,502,44818 --open 192.168.0.0/24
 ```
 
-This will scan your entire `192.168.0.x` subnet and show only devices with those ports open.
-
 ---
 
-## 🔌 Scanned Ports
+## Scanned Ports
 
 | Port | Protocol | Used by |
 |------|----------|---------|
@@ -54,21 +97,21 @@ This will scan your entire `192.168.0.x` subnet and show only devices with those
 
 ---
 
-## 📌 Tips
+## Tips
 
-- Run with `sudo` for faster and more accurate results:
+- Run with `sudo` on Linux/macOS for faster and more accurate results:
   ```bash
   sudo nmap -p 102,502,44818 --open 192.168.0.0/24
   ```
-- Add `-sV` to detect the service version running on open ports:
+- Add `-sV` to detect service versions on open ports:
   ```bash
   sudo nmap -p 102,502,44818 -sV --open 192.168.0.0/24
   ```
-- Not sure what your IP range is? Run `ip a` (Linux) or `ipconfig` (Windows).
+- Not sure what your IP range is? Run `ip a` (Linux/macOS) or `ipconfig` (Windows).
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the **GPL-3.0 License** — see the [LICENSE](LICENSE) file for details.
 
