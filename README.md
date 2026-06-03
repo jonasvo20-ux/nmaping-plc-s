@@ -12,7 +12,7 @@ No more manual command typing — just run the script for your OS and go.
 
 | Platform | Script | Description |
 |----------|--------|-------------|
-| Linux / macOS | `nmpaping.sh` | Bash script, prompts for IP range and scans |
+| Linux / macOS | `nmapping.sh` | Bash script, prompts for IP range and scans |
 | Windows | `nmapping_PLC.bat` | Simple batch script with nmap check |
 | Windows (Easy Mode) | `nmapping_PLC_easy.bat` | Interactive menu with preset ranges, single IP mode, and save-to-file |
 
@@ -39,8 +39,8 @@ No more manual command typing — just run the script for your OS and go.
 ### Linux / macOS
 
 ```bash
-chmod +x nmpaping.sh
-./nmpaping.sh
+chmod +x nmapping.sh
+./nmapping.sh
 ```
 
 The script will prompt you to enter your IP range and run the scan automatically.

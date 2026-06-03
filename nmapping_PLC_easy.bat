@@ -109,11 +109,11 @@ if /i "%savefile%"=="y" (
     set outfile=plc_scan_%timestamp%.txt
     echo Results will be saved to: %outfile%
     echo.
-    nmap -p 102,502,44818 --open %range% -oN %outfile%
+    nmap -p 102,502,44818 --open "%range%" -oN "%outfile%"
     echo.
     echo Results saved to: %outfile%
 ) else (
-    nmap -p 102,502,44818 --open %range%
+    nmap -p 102,502,44818 --open "%range%"
 )
 
 echo.

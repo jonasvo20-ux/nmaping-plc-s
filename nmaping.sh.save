@@ -1,4 +1,0 @@
-chmod +x nmaping.sh
-git add nmaping.sh
-git commit -m "Add PLC scanner script"
-git push

@@ -21,6 +21,6 @@ if "%range%"=="" (
 echo.
 echo Scanning %range% ...
 echo.
-nmap -p 102,502,44818 --open %range%
+nmap -p 102,502,44818 --open "%range%"
 echo.
 pause
