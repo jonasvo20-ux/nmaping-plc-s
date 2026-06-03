@@ -20,7 +20,12 @@ Scans for common industrial protocol ports like **Modbus (502)**, **EtherNet/IP 
 | Windows | [Download installer](https://nmap.org/download.html) |
 
 ---
-
+## 🖥️ Script
+Clone the repo and run:
+```bash
+chmod +x nmaping.sh
+./nmaping.sh
+```
 ## 🚀 Usage
 
 Run the following command and replace the IP range with your own network:
