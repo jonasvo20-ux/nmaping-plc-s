@@ -90,7 +90,7 @@ python plc_scanner.py
 
 ---
 
-## CLI / Legacy Scripts
+## CLI / Legacy Scripts.
 
 The original bash and batch scripts are still included for headless or quick use:
 
