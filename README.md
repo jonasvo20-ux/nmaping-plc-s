@@ -30,7 +30,7 @@ The old batch/shell scripts are still included for quick CLI use, but the GUI is
 
 ---
 
-## Screenshots.
+## Screenshots
 
 > _Coming soon — contributions welcome._
 
